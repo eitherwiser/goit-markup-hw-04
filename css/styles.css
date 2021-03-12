@@ -281,7 +281,6 @@ index main ==============================================================
 /*features*/
 .features-list {
   margin-left: calc(-1 * var(--list-gap));
-  /*max-height: 101px;*/
 }
 
 .features-list > li {
@@ -320,12 +319,15 @@ index main ==============================================================
 
 /*specialization*/
 .specialization-container {
-  flex-direction: column;
   padding-bottom: var(--big-padding);
 }
 
 .specialization-list {
-  justify-content: space-between;
+  margin-left: calc(-1 * var(--list-gap));
+}
+.specialization-list > li {
+  margin-left: var(--list-gap);
+  flex-basis: calc(100% / 3);
 }
 
 /*team*/
@@ -395,11 +397,6 @@ index main ==============================================================
 }*/
 
 /*clients*/
-/*!!! column?*/
-/*.clients-container {
-  flex-direction: column;
-}*/
-
 .clients-list {
   margin-left: calc(-1 * var(--list-gap));
 }
@@ -411,6 +408,7 @@ index main ==============================================================
 
 .clients-list-item-link {
   display: flex;
+  width: 170px;
   height: 90px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
@@ -432,7 +430,7 @@ index main ==============================================================
 portfolio main ==========================================================
 */
 .examples-container {
-  flex-direction: column;
+  /*flex-direction: column;*/
 }
 
 /*buttons*/
@@ -477,7 +475,7 @@ portfolio main ==========================================================
 
 .example-gallery > li {
   display: flex;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   flex-basis: calc(100% / 3);
   margin-left: var(--list-gap);
   margin-top: var(--list-gap);
