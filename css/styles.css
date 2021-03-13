@@ -17,6 +17,11 @@
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --footer-icons-socialmedia-color: rgba(255, 255, 255, 0.1);
   --header-border-color: #ececec;
+  --hero-gradient: linear-gradient(
+    to bottom,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  );
   --btn-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   --box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -206,10 +211,12 @@ header .logo {
   margin: 0 10px 0 0;
   fill: currentColor;
 }
-/*
+
 .header-icon:hover,
 .header-icon:focus {
-}*/
+  fill: var(--brand-color);
+  outline-color: var(--brand-color);
+}
 
 /*
 index main ==============================================================
@@ -267,12 +274,7 @@ index main ==============================================================
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/studio/hero/hero.jpg);
+  background-image: var(--hero-gradient), url(../images/studio/hero/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -380,21 +382,22 @@ index main ==============================================================
   display: flex;
 }
 
-.team-list-item-socialmedia-icon {
+.content .icon-socialmedia {
   display: inline-flex;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: #afb1b8;
+  background-color: var(--white-color);
+  fill: var(--icon-color);
   justify-content: center;
   align-items: center;
 }
 
-/*.team-list-item-socialmedia-link:hover,
-.team-list-item-socialmedia-link:focus {
-  border-color: var(--brand-color);
-  color: var(--brand-color);
-}*/
+.content .icon-socialmedia:hover,
+.content .icon-socialmedia:focus {
+  background-color: var(--brand-color);
+  fill: var(--white-color);
+}
 
 /*clients*/
 .clients-list {
@@ -415,23 +418,23 @@ index main ==============================================================
 }
 
 .icon-client {
+  color: var(--icon-color);
   width: 100%;
   height: 100%;
   fill: currentColor;
 }
 
-/*.clients-list-item-link:hover,
-.clients-list-item-link:focus {
+.clients-list-item-link:hover,
+.clients-list-item-link:hover,
+.icon-client:hover,
+.icon-client:focus {
   border-color: var(--brand-color);
-  color: var(--brand-color);
-}*/
+  fill: var(--brand-color);
+}
 
 /*
 portfolio main ==========================================================
 */
-.examples-container {
-  /*flex-direction: column;*/
-}
 
 /*buttons*/
 .examples-container .filter-buttons {
@@ -580,17 +583,17 @@ footer ==================================================================
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: var(--white-color);
+  fill: var(--white-color);
   justify-content: center;
   align-items: center;
   background-color: var(--footer-icons-socialmedia-color);
 }
 
 .contacts-socialmedia-list > li:not(:last-child) {
-  /*display: flex;*/
   margin-right: 10px;
 }
-/*.contacts-socialmedia .icon-socialmedia:hover,
+.contacts-socialmedia .icon-socialmedia:hover,
 .contacts-socialmedia .icon-socialmedia:focus {
   background-color: var(--brand-color);
-}*/
+  fill: var(--white-color);
+}
